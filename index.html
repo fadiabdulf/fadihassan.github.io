@@ -1,33 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fadi Hassan — CV</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:linear-gradient(180deg,#071122 0%, #071a2a 100%);color:#e6eef6;line-height:1.45}
+    .container{max-width:980px;margin:28px auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center}
+    .photo{width:112px;height:112px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#06121a}
+    h1{margin:0;font-size:28px}
+    .meta{margin-left:6px}
+    .contact{color:var(--muted);font-size:14px;margin-top:6px}
+    .top-actions{margin-left:auto;display:flex;gap:8px}
+    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .layout{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .section{margin-bottom:14px}
+    .section h2{font-size:16px;margin:0 0 8px 0;color:#d9f7ff}
+    ul{margin:0;padding-left:18px}
+    .skill{display:inline-block;border-radius:999px;padding:6px 10px;margin:6px 6px 0 0;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
+    a.pdf{display:inline-block;margin-top:8px;text-decoration:none;color:var(--accent);font-weight:600}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:860px){.layout{grid-template-columns:1fr} .top-actions{margin-left:0}}
+    .chip{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);display:inline-block;margin-right:8px}
+    .badge{font-size:12px;padding:4px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--accent);display:inline-block}
+    .links a{display:inline-block;margin-right:10px;color:var(--muted);text-decoration:none}
+  </style>
 </head>
 <body>
+  <div class="container">
     <header>
-        <h1>Your Name</h1>
-        <p>Software Developer | Web Designer | Enthusiast</p>
+      <div class="photo">FH</div>
+      <div class="meta">
+        <h1>Fadi Hassan <span style="font-size:14px;color:var(--muted);font-weight:600">PhD — AI | NLP | Computer Vision</span></h1>
+        <div class="contact">Kanavakatu 1, Helsinki · +358 468453423 · <a href="mailto:fadiabdulf@gmail.com" style="color:var(--accent);text-decoration:none">fadiabdulf@gmail.com</a></div>
+        <div class="contact">Nationality: Yemeni · Born: April 1, 1988</div>
+        <div style="margin-top:8px" class="links">
+          <a href="/mnt/data/Fadi_CV_2025.pdf" class="pdf" target="_blank">Download full CV (PDF)</a>
+          <a href="https://scholar.google.com/citations?user=QKOD9WYAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          <a href="https://dialnet.unirioja.es/servlet/tesis?codigo=302678" target="_blank">PhD thesis</a>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="btn" onclick="window.print()">Print</button>
+        <button class="btn" onclick="toggleTheme()">Toggle theme</button>
+      </div>
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>Short bio about you.</p>
-    </section>
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/yourusername/project1">Project 1</a></li>
-            <li><a href="https://github.com/yourusername/project2">Project 2</a></li>
-        </ul>
-    </section>
-    <section>
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-    </section>
+
+    <main class="layout">
+      <div>
+        <section class="card section">
+          <h2>Research interests</h2>
+          <p>Artificial Intelligence, Natural Language Processing, Computer Vision, and Data Privacy.</p>
+        </section>
+
+        <section class="card section">
+          <h2>Education</h2>
+          <div>
+            <strong>PhD in Computer Science</strong> — Universitat Rovira i Virgili (2017–2021)<br>
+            <small class="chip">A cum laude</small>
+            <div style="color:var(--muted);margin-top:6px;font-size:14px">PhD thesis: <a href="https://dialnet.unirioja.es/servlet/tesis?codigo=302678" target="_blank">Utility-Preserving Anonymization of Textual Documents</a></div>
+          </div>
+
+          <div style="margin-top:10px">
+            <strong>Master’s in Computer Security Engineering & AI</strong> — Universitat Rovira i Virgili (2016–2017)
+            <div style="color:var(--muted);margin-top:6px">Master's thesis: <a href="https://deim.urv.cat/~itaka/itaka2/PDF/acabats/MEMORIA_TFM_FadiHassan.pdf" target="_blank">Target-Dependent Sentiment Analysis of Tweets</a></div>
+          </div>
+
+          <div style="margin-top:10px">
+            <strong>BSc in Computer Science</strong> — Hodeidah University (2008–2012)
+            <div style="color:var(--muted);margin-top:6px">Ranked 1st · Thesis: Decision Methods for Aiding the Detection of Breast Cancer in X-ray Images</div>
+          </div>
+        </section>
+
+        <section class="card section">
+          <h2>Professional experience</h2>
+          <ul>
+            <li><strong>Data Scientist</strong>, Huawei Technologies Oy, Helsinki — Dec 2020 – Present</li>
+            <li><strong>Intern</strong>, Huawei Technologies Oy, Helsinki — Jun 2020 – Nov 2020</li>
+            <li><strong>Research & Teaching</strong>, Universitat Rovira i Virgili — 2013 – 2021 (teaching assistant, research grants, recruitment grants)</li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Selected publications & links</h2>
+          <p style="color:var(--muted);margin:0">Google Scholar, PhD thesis and selected papers linked above. For a full list, visit the Google Scholar profile linked at the top.</p>
+        </section>
+
+        <section class="card section">
+          <h2>Honors & competitions</h2>
+          <ul>
+            <li>Lead Huawei team — 1st place HASOC-Meme 2025; HASOC 2024; HASOC 2023</li>
+            <li>2nd place SemEval 2023 task 10 (EDOS)</li>
+            <li>Multiple placements in SemEval 2022, MEDDOPROF 2021, CANTEMIST 2020, MEDDOCAN 2019</li>
+            <li>Best privacy track paper — IEEE TrustCom 2019</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside>
+        <div class="card section">
+          <h2>Skills</h2>
+          <div style="margin-top:8px">
+            <span class="skill">Python</span><span class="skill">C/C++</span><span class="skill">TensorFlow</span><span class="skill">PyTorch</span>
+            <span class="skill">Keras</span><span class="skill">scikit-learn</span><span class="skill">spaCy</span><span class="skill">StanfordNLP</span>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Teaching</h2>
+          <p style="color:var(--muted);margin:0">Procedural Programming, Compiler Construction, Computer Organization, Web Technology, Data Security, OOP, Visual Programming, Computer Graphics, Image Processing, AI.</p>
+        </div>
+
+        <div class="card section">
+          <h2>Languages</h2>
+          <p class="badge">Arabic (native)</p>
+          <p class="badge">English (very good) · Spanish (intermediate) · Finnish (basic)</p>
+        </div>
+
+        <div class="card section">
+          <h2>Quick links</h2>
+          <a href="https://hasocfire.github.io/hasoc/2023" target="_blank">HASOC results</a><br>
+          <a href="https://multiconer.github.io/results" target="_blank">MultiCoNER</a>
+        </div>
+      </aside>
+    </main>
+
     <footer>
-        <p>© 2025 Your Name</p>
+      <small>Built from the uploaded CV. Edit this file or ask me to customize colors, layout, or to add sections (projects, blog, contact form, social links).</small>
     </footer>
+  </div>
+
+  <script>
+    function toggleTheme(){
+      document.documentElement.style.setProperty('--bg', document.documentElement.style.getPropertyValue('--bg') === '#0f1724' ? '#fff' : '#0f1724');
+      // simple invert for demo
+      if(document.body.style.backgroundColor === 'white'){
+        document.body.style.background = 'linear-gradient(180deg,#071122 0%, #071a2a 100%)';
+        document.querySelectorAll('.card').forEach(c=>c.style.color='');
+      } else {
+        document.body.style.background = '#fff';
+        document.querySelectorAll('.card').forEach(c=>c.style.color='#0b1220');
+      }
+    }
+  </script>
 </body>
 </html>
